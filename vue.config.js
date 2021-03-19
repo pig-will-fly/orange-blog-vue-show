@@ -9,7 +9,7 @@ module.exports = {
         port: 9001,
         proxy: {
             '/orange': {
-                target: 'http://218.244.158.146',
+                target: 'http://127.0.0.1',
                 secure: false,
                 changOrigin: true,
                 pathRewrite: {

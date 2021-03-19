@@ -1,0 +1,122 @@
+// 引入官方提供的 less 样式入口文件
+@import '~ant-design-vue/dist/antd.less';
+// 引入自定义主题覆盖原样式
+@import 'theme.less';
+
+html,
+body {
+  font-family: "Nunito", Helvetica, Arial, sans-serif;
+  height: 100%;
+  color: @common-font-color !important;
+  background: @body-color !important;
+}
+
+.margin-top10-md {
+  margin-top: 10px;
+}
+
+.border-radius-md {
+  border-radius: 5px;
+}
+
+@media screen and (min-width: 1200px) {
+  html {
+    font-size: 16px !important;
+  }
+}
+
+@media screen and (max-width: 1150px) {
+  html {
+    font-size: 16px !important;
+    background: @content-color !important;
+  }
+
+  body {
+    background: @content-color !important;
+  }
+
+  .v-note-wrapper .v-note-panel .v-note-show .v-show-content,
+  .v-note-wrapper .v-note-panel .v-note-show .v-show-content-html {
+    background: @content-color !important;
+  }
+
+  .hidden-md {
+    display: none !important;
+  }
+
+  .show-md {
+    display: block !important;
+  }
+
+  .width-md {
+    width: 100% !important;
+    padding: 0 0 !important;
+  }
+
+  .banner-height-md {
+    height: 160px !important;
+  }
+
+  .border-radius-md {
+    border-radius: 0 !important;
+  }
+
+  .flex-direction-md {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 992px) {
+  html {
+    font-size: 45px !important;
+  }
+
+  .hidden-sm {
+    display: none !important;
+  }
+
+  .margin-right15-sm {
+    margin-right: 0 !important;
+  }
+
+  img[alt="article-image"] {
+    width: 100% !important;
+  }
+}
+
+// 重写ant样式
+.ant-list-item-extra {
+  overflow: hidden;
+}
+
+.ant-list-vertical .ant-list-item-action > li {
+  padding: 0 6px;
+}
+
+.@{menu-prefix-cls} {
+  &-dark &-inline&-sub {
+    background: @menu-inline-color;
+    box-shadow: unset;
+  }
+
+  &-inline&-dark {
+    background: @menu-inline-color;
+  }
+}
+
+.ant-drawer-content-wrapper {
+  width: 45% !important;
+
+  .ant-drawer-content .ant-drawer-wrapper-body {
+    background-color: @menu-inline-color;
+
+    .ant-drawer-body {
+      padding: 0;
+    }
+  }
+}
+
+
+.ant-col.ant-form-item-control-wrapper {
+  width: 100%;
+}
